@@ -24,6 +24,14 @@ public class EnemyAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        
+        seeker.StartPath(rb.position, target.position, OnPathComplete);
+    }
+    void OnPathComplete(Path p)
+    {
+       if(!p.error)
+       {
+         path = p;
+         currentWaypoint = 0;
+       }
     }
 }
