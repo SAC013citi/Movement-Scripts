@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour {
+public class notifications : MonoBehaviour {
     public GameObject uiObject;
     public GameObject cube/*Shape**/;
     void start(){
